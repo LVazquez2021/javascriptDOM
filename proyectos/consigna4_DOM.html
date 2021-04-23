@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consigna4</title>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            width: 800px;
+        }
+        
+        #btn2,
+        #btn1 {
+            cursor: pointer;
+            margin: 20px;
+            height: 35px;
+            width: 15%;
+        }
+        
+        .container button {
+            background-color: lightblue;
+        }
+        
+        .auxiliares {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        
+        .volver {
+            display: inline-block;
+            width: 45px;
+            padding: 10px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="btn1" onclick="pulsarBtn1();">Boton1</button>
+        <button id="btn2" onclick="pulsarBtn2();">Boton2</button>
+    </div>
+
+    <div class="auxiliares">
+        <a href="../index.html" class="volver">volver</a>
+    </div>
+
+    <script>
+        function pulsarBtn1() {
+            console.log('Presionaste el boton 1');
+
+        }
+
+        function pulsarBtn2() {
+            console.log('Presionaste el boton 2');
+
+        }
+    </script>
+
+</body>
+
+<!-- /* Página con dos botones, que se muestren como "Botón 1" y "Botón 2", que al clickear cada uno muestre por consola un mensaje indicando cuál se clickeó. 
+ */ -->
+
+</html>

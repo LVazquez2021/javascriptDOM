@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consigna5</title>
+
+    <style>
+        .entradas {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        #numeral {
+            width: 60px;
+        }
+        
+        #btn1,
+        #btn2 {
+            margin-left: 15px;
+        }
+        
+        .auxiliares {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        
+        .volver {
+            display: inline-block;
+            width: 45px;
+            padding: 10px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="entradas">
+        <div class="input1">
+            <input id="numeral" type="number" value=0>
+        </div>
+        <div class="boton">
+            <button id="btn1" onclick="mostrarValorUno();">ValorNumero</button>
+            <button id="btn2" onclick="mostrarValorDos();">ValorNumerox2</button>
+        </div>
+    </div>
+
+    <div class="auxiliares">
+        <a href="../index.html" class="volver">volver</a>
+    </div>
+
+    <script>
+        function mostrarValorUno() {
+            const valorInput = document.getElementById('numeral').value;
+            console.log(valorInput);
+        }
+
+        function mostrarValorDos() {
+            const valorInput = document.getElementById('numeral').value;
+            const multiplicarPorDos = valorInput * 2;
+            console.log(multiplicarPorDos);
+        }
+    </script>
+</body>
+
+</html>

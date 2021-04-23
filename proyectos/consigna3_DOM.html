@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consigna3</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        div input {
+            width: 300px;
+        }
+        
+        div button {
+            width: 100px;
+        }
+        
+        .resultado {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .auxiliares {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        
+        .volver {
+            display: inline-block;
+            width: 45px;
+            padding: 10px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input1">
+            <input id="cuadroTexto" type="password" placeholder="escribe una palabra..." value="">
+        </div>
+        <div class="boton">
+            <button id="btn" onclick="mostrarPalabra();">Click</button>
+        </div>
+
+    </div>
+    <div class="resultado">
+        <p id="revelaPalabra">Aqui se revelara la palabra oculta</p>
+    </div>
+    <div class="auxiliares">
+        <a href="../index.html" class="volver">volver</a>
+    </div>
+
+
+    <script>
+        /*     Página con un input tipo password (type="password"), un botón "revelar" y un elemento <p>. Al clickear el botón, cambiar el textContent del elemento <p> para que muestre el texto ingresado en el input (que se accede con su value igual que en un input text, lo único que cambia es que el navegador muestra pelotitas) */
+
+        function limpiar() {
+            const valorInput = document.getElementById('cuadroTexto').value = '';
+        }
+
+        function mostrarPalabra() {
+            const valorInput = document.getElementById('cuadroTexto').value;
+            const pResultado = document.getElementById('revelaPalabra');
+            if (valorInput !== '') {
+                pResultado.textContent = valorInput;
+                pResultado.style.color = 'green';
+                pResultado.style.fontSize = '20px';
+                limpiar();
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consigna2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        div input {
+            width: 300px;
+        }
+        
+        div button {
+            width: 100px;
+        }
+        
+        .auxiliares {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        
+        .parrafo {
+            margin-top: 15px;
+            color: blue;
+            font-size: 25px;
+        }
+        
+        .volver {
+            display: inline-block;
+            width: 45px;
+            padding: 10px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input1">
+            <input id="cuadroTexto" type="text" placeholder="escribe una palabra...">
+        </div>
+        <div class="boton">
+            <button id="btn" onclick="mostrarPalabra();">Click</button>
+        </div>
+    </div>
+    <div class="auxiliares">
+        <div class="parrafo">
+            <p>Abrir consola para ver los resultados</p>
+        </div>
+        <a href="../index.html" class="volver">volver</a>
+    </div>
+
+    <script>
+        function limpiar() {
+            const valorInput = document.getElementById('cuadroTexto').value = '';
+        }
+
+        function mostrarPalabra() {
+            const valorInput = document.getElementById('cuadroTexto').value;
+            console.log(valorInput);
+
+            limpiar();
+        }
+    </script>
+
+
+</body>
+
+</html>

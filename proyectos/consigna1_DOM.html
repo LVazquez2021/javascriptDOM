@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consigna1</title>
+
+    <style>
+        .auxiliares {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        
+        .volver {
+            display: inline-block;
+            width: 45px;
+            padding: 10px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="btn" onclick="saludar();">Click</button>
+        <p>Abrir consola para ver resultados</p>
+    </div>
+    <div class="auxiliares">
+        <a href="../index.html" class="volver">volver</a>
+    </div>
+
+    <script>
+        function saludar() {
+            const elementoP = document.getElementsByTagName('p');
+            console.log('HOLA MUNDO!');
+            elementoP[0].style.color = 'BLUE'
+            elementoP[0].style.fontSize = '25px'
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- Armar una página que tenga solo un botón que, al clickearlo, muestre por consola "¡HOLA MUNDO!" -->

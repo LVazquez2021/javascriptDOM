@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConsignaExtra</title>
+
+    <style>
+        h1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        span {
+            margin: 5px;
+        }
+        
+        button {
+            width: 100px;
+            height: 25px;
+            cursor: pointer;
+            background-color: lightblue;
+        }
+        
+        button:hover {
+            background-color: #e83e8c;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        .botones,
+        .resultado {
+            margin-top: 20px;
+        }
+        
+        #input-numero1,
+        #input-numero2 {
+            width: 50px;
+        }
+        
+        .auxiliares {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+        
+        .volver {
+            display: inline-block;
+            width: 45px;
+            padding: 10px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Operaciones Matematicas</h1>
+    <div class="container">
+        <div class="inputs">
+            <span>Primer Valor:</span> <input id="input-numero1" type="number" value="0">
+            <span>Segundo Valor:</span> <input id="input-numero2" type="number" value="0">
+        </div>
+        <div class="botones">
+            <button id="btn1" onclick="sumarValores();">SUMAR</button>
+            <button id="btn2" onclick="restarValores();">RESTAR</button>
+            <button id="btn3" onclick="multiplicarValores();">MULTIPLICAR</button>
+            <button id="btn4" onclick="dividirValores();">DIVIDIR</button>
+        </div>
+        <div class="resultado">
+            <p id="mostrarResultado">Aqui esta el resultado</p>
+        </div>
+    </div>
+    <div class="auxiliares">
+        <a href="../index.html" class="volver">volver</a>
+    </div>
+    <script>
+        function sumarValores() {
+            const valorInput1 = document.getElementById('input-numero1').valueAsNumber;
+            const valorInput2 = document.getElementById('input-numero2').valueAsNumber;
+            const pResultado = document.getElementById('mostrarResultado');
+            const resultadoValor = valorInput1 + valorInput2;
+            pResultado.textContent = `El Resultado es: ${resultadoValor}`
+            pResultado.style.color = 'green';
+        }
+
+        function restarValores() {
+            const valorInput1 = document.getElementById('input-numero1').valueAsNumber;
+            const valorInput2 = document.getElementById('input-numero2').valueAsNumber;
+            const pResultado = document.getElementById('mostrarResultado');
+            const resultadoValor = valorInput1 - valorInput2;
+            pResultado.textContent = `El Resultado es: ${resultadoValor}`
+            pResultado.style.color = 'green';
+        }
+
+        function multiplicarValores() {
+            const valorInput1 = document.getElementById('input-numero1').valueAsNumber;
+            const valorInput2 = document.getElementById('input-numero2').valueAsNumber;
+            const pResultado = document.getElementById('mostrarResultado');
+            const resultadoValor = valorInput1 * valorInput2;
+            pResultado.textContent = `El Resultado es: ${resultadoValor}`
+            pResultado.style.color = 'green';
+        }
+
+        function dividirValores() {
+            const valorInput1 = document.getElementById('input-numero1').valueAsNumber;
+            const valorInput2 = document.getElementById('input-numero2').valueAsNumber;
+            const pResultado = document.getElementById('mostrarResultado');
+            if (valorInput2 !== 0) {
+                const resultadoValor = valorInput1 / valorInput2;
+                pResultado.textContent = `El Resultado es: ${resultadoValor}`;
+                pResultado.style.color = 'green';
+            } else {
+                pResultado.textContent = `No se puede dividir en cero`
+                pResultado.style.color = 'red';
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
