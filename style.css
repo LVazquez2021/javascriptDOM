@@ -19,12 +19,27 @@ h2 {
     bottom: 100px;
 }
 
-.navegacion {
-    background-color: aqua;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
+@media only screen and (min-width:600px) {
+    .navegacion {
+        background-color: rosybrown;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .navegacion {
+        background-color: orange;
+    }
+    h1 {
+        display: none;
+    }
+    .texto2 {
+        display: none;
+    }
 }
 
 .nav-enlace a {
